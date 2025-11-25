@@ -1,6 +1,63 @@
 import React from "react";
 import bgimg from "../assets/home.jpg";
 import about from "../assets/about.jpg";
+import pizza from "../assets/pizza.jpg";
+import Sandwich from "../assets/Sandwich.jpeg";
+import Biriyani from "../assets/Biriyani.webp";
+import Lasagna from "../assets/Lasagna.jpg";
+import IceCream from "../assets/Ice Cream.jpg";
+import pasta from "../assets/pasta.webp";
+import FoodCard from "../components/FoodCard";
+import cart from "../assets/shopping-cart.png";
+
+const foodItems = [
+  {
+    image: pizza,
+    title: "Cheese Pizza",
+    description: "Hand-tossed dough with tomato sauce & mozzarella.",
+    price: "Rs.1500.00",
+    cartImage: cart,
+  },
+  {
+    image: pasta,
+    title: "Pasta",
+    description:
+      "Fresh pasta tossed in creamy sauce with garlic, herbs, and parmesan cheese.",
+    price: "Rs.800.00",
+    cartImage: cart,
+  },
+  {
+    image: Lasagna,
+    title: "Lasagna",
+    description: "Layered pasta sheets with seasoned meat, tomato sauce.",
+    price: "Rs.1200.00",
+    cartImage: cart,
+  },
+  {
+    image: IceCream,
+    title: "Ice Cream",
+    description:
+      "A rich and creamy blend of fresh milk and premium cocoa, topped  for your light dress.",
+    price: "Rs.550.00",
+    cartImage: cart,
+  },
+  {
+    image: Biriyani,
+    title: "Biriyani",
+    description:
+      "Fragrant basmati rice cooked with aromatic spices, tender meat, and herbs.",
+    price: "Rs.1600.00",
+    cartImage: cart,
+  },
+  {
+    image: Sandwich,
+    title: "Sandwich",
+    description:
+      "Toasted bread filled with fresh vegetables, cheese, and a light dressing ",
+    price: "Rs.600.00",
+    cartImage: cart,
+  },
+];
 
 function LandingPage() {
   return (
@@ -38,94 +95,31 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* FOOD CARD SECTION */}
+
       <section
         id="gallery"
-        className="bg-cover bg-center bg-no-repeat bg-[#8c4f2b] h-380 sm:px-40 py-20 sm:h-220 "
+        className="bg-[#8c4f2b] bg-cover bg-center bg-no-repeat py-20 px-6 sm:px-40"
       >
         <h2 className="text-5xl font-bold text-center text-white mb-10">
           <span className="text-amber-500">Food</span> Gallery
         </h2>
 
-        {/* FOOD CARDS 1st ROW */}
-        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-1">
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70 ">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8">
+          {foodItems.map((food, index) => (
+            <FoodCard
+              key={index}
+              image={food.image}
+              title={food.title}
+              description={food.description}
+              price={food.price}
+              cart={food.cartImage}
             />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
-
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70 ">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
-
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70 ">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
-        </div>
-
-        {/* FOOD CARDS 2nd ROW */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-1 mt-20">
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
-
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70 ">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
-
-          <div className="bg-white shadow-md rounded-lg p-5 hover:scale-105 transition duration-300 w-60  h-50 sm:w-80 sm:h-70 ">
-            <img
-              src="../assets/pizza.jpg"
-              alt="Cheese Pizza"
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold">Cheese Pizza</h3>
-            <p className="text-gray-600 text-sm">
-              Hand-tossed dough with tomato sauce & mozzarella.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
-     
+      
     </div>
   );
 }
