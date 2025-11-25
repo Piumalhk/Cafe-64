@@ -9,6 +9,8 @@ import IceCream from "../assets/Ice Cream.jpg";
 import pasta from "../assets/pasta.webp";
 import FoodCard from "../components/FoodCard";
 import cart from "../assets/shopping-cart.png";
+import Navbar from "../components/Navbar";
+
 
 const foodItems = [
   {
@@ -62,13 +64,14 @@ const foodItems = [
 function LandingPage() {
   return (
     <div>
+     
       {/* HERO SECTION */}
       <section
         id="home"
         style={{ backgroundImage: `url(${bgimg})` }}
         className="bg-cover bg-center bg-no-repeat relative h-200"
-      >
-        <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-32 gap-10  ">
+      > <Navbar />
+        <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-15 gap-10  ">
           <div className="flex-1  md:mt-2 text-center md:text-left">
             <p className="text-2xl mb-4 text-amber-600 font-bold ">
               Welcome to
@@ -145,6 +148,8 @@ function LandingPage() {
           every visit special
         </p>
       </section>
+
+      
     </div>
   );
 }
