@@ -119,7 +119,32 @@ function LandingPage() {
         </div>
       </section>
 
-      
+      {/* ABOUT SECTION */}
+      <section
+        id="about"
+        style={{ backgroundImage: `url(${about})` }}
+        className="bg-cover bg-center bg-no-repeat px-6 py-20 backdrop-brightness-90 "
+      >
+        <h2 className="text-5xl font-bold text-center text-white mb-10 md:ml-130 ">
+          <span className="text-amber-500">About</span> Us
+        </h2>
+
+        <p className="text-white text-center max-w-2xl mx-auto text-lg md:text-2xl md:ml-160 ">
+          Welcome to Cafe 64, your cozy spot for great coffee, delicious food,
+          and relaxing moments. We focus on serving fresh ingredients,
+          handcrafted drinks, and dishes made with care. <br />
+          <br />
+          Whether you're meeting friends, studying with a latte, or enjoying a
+          quiet meal, Cafe 64 offers a warm and welcoming atmosphere.
+          <br />
+          <br />
+          Our goal is simple — to bring people together through good food, good
+          coffee, and a comfortable space. <br />
+          <br />
+          Visit Cafe 64 and experience the flavors and friendliness that make
+          every visit special
+        </p>
+      </section>
     </div>
   );
 }
