@@ -263,7 +263,7 @@ function LandingPage() {
                 <div className="w-8 h-8 rounded-2xl bg-amber-600 flex items-center justify-center">
                   <img src={call} alt="Phone" className="w-4 h-4" />
                 </div>
-                (123) 456-7890
+                +94 766433200
               </div>
 
               <div className="flex items-center gap-3 hover:scale-105 transition">
@@ -277,7 +277,7 @@ function LandingPage() {
                 <div className="w-8 h-8 rounded-2xl bg-amber-600 flex items-center justify-center">
                   <img src={location} alt="Location" className="w-4 h-4" />
                 </div>
-                123 Cafe St, Food City
+                25 Cafe St, Food City, Kandy
               </div>
             </div>
           </div>
