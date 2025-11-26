@@ -7,12 +7,12 @@ import bgimg from "../assets/home.jpg";
 import about from "../assets/about.jpg";
 
 {/* Food card images */}
-import pizza from "../assets/pizza.jpg";
+import pizza from "../assets/Pizza.jpg";
 import Sandwich from "../assets/Sandwich.jpeg";
 import Biriyani from "../assets/Biriyani.webp";
 import Lasagna from "../assets/Lasagna.jpg";
 import IceCream from "../assets/Ice Cream.jpg";
-import pasta from "../assets/pasta.webp";
+import pasta from "../assets/Pasta.webp";
 import cart from "../assets/shopping-cart.png";
 
 {/* Components */}
