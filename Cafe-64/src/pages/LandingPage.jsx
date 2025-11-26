@@ -112,7 +112,7 @@ function LandingPage() {
               drinks, and unforgettable moments. Located in
               <br /> the heart of our community.{" "}
             </p>
-            <div className="mt-20 flex justify-center md:justify-start md:mt-8 gap-4">
+            <div className="mt-10 flex justify-center md:justify-start md:mt-8 gap-4">
               <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md">
                 Explore Menu
               </button>
