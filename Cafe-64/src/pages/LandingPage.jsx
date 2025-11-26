@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+{/*Hero Background image */}
 import bgimg from "../assets/home.jpg";
+
+{/* About us Background image */}
 import about from "../assets/about.jpg";
+
+{/* Food card images */}
 import pizza from "../assets/pizza.jpg";
 import Sandwich from "../assets/Sandwich.jpeg";
 import Biriyani from "../assets/Biriyani.webp";
 import Lasagna from "../assets/Lasagna.jpg";
 import IceCream from "../assets/Ice Cream.jpg";
 import pasta from "../assets/pasta.webp";
-import FoodCard from "../components/FoodCard";
 import cart from "../assets/shopping-cart.png";
+
+{/* Components */}
+import FoodCard from "../components/FoodCard";
 import Navbar from "../components/Navbar";
+
+{/* Footer */}
 import facebookIcon from "../assets/facebook.png";
 import whatsapp from "../assets/whatsapp.png";
 import youtube from "../assets/youtube.png";
 import call from "../assets/call.png";
 import email from "../assets/email.png";
 import location from "../assets/location.png";
+
+{/* AOS Animation */}
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const foodItems = [
   {
@@ -67,6 +81,12 @@ const foodItems = [
 ];
 
 function LandingPage() {
+
+  useEffect(() => { 
+    AOS.init({ duration: 1000 });
+  })
+
+
   return (
     <div>
       {/* HERO SECTION */}
@@ -77,7 +97,7 @@ function LandingPage() {
       >
         {" "}
         <Navbar />
-        <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-15 gap-10  ">
+        <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-15 gap-10  "  data-aos="fade-up">
           <div className="flex-1  md:mt-2 text-center md:text-left">
             <p className="text-2xl mb-4 text-amber-600 font-bold ">
               Welcome to
@@ -108,13 +128,13 @@ function LandingPage() {
 
       <section
         id="gallery"
-        className="bg-[#8c4f2b] bg-cover bg-center bg-no-repeat py-20 px-6 sm:px-40"
+        className="bg-[#8c4f2b] bg-cover bg-center bg-no-repeat py-20 px-6 sm:px-40 " 
       >
         <h2 className="text-5xl font-bold text-center text-white mb-10">
           <span className="text-amber-500">Food</span> Gallery
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8" data-aos="fade-up">
           {foodItems.map((food, index) => (
             <FoodCard
               key={index}
@@ -134,11 +154,11 @@ function LandingPage() {
         style={{ backgroundImage: `url(${about})` }}
         className="bg-cover bg-center bg-no-repeat px-6 py-20 backdrop-brightness-90 "
       >
-        <h2 className="text-5xl font-bold text-center text-white mb-10 md:ml-130 ">
+        <h2 className="text-5xl font-bold text-center text-white mb-10 md:ml-130 "  data-aos="fade-up">
           <span className="text-amber-500">About</span> Us
         </h2>
 
-        <p className="text-white text-center max-w-2xl mx-auto text-lg md:text-2xl md:ml-160 ">
+        <p className="text-white text-center max-w-2xl mx-auto text-lg md:text-2xl md:ml-160 "  data-aos="fade-up">
           Welcome to Cafe 64, your cozy spot for great coffee, delicious food,
           and relaxing moments. We focus on serving fresh ingredients,
           handcrafted drinks, and dishes made with care. <br />
@@ -157,7 +177,7 @@ function LandingPage() {
 
       {/* FOOTER SECTION */}
       <section className="bg-[#2F231A] text-white">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-10 px-6 py-12 md:px-20 md:ml-15">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-10 px-6 py-12 md:px-20 md:ml-15" >
           {/* BRAND + SOCIAL */}
           <div className="w-full md:w-1/4">
             <img src="logo.png" alt="Cafe 64 Logo" className="h-12 w-auto" />
@@ -191,7 +211,7 @@ function LandingPage() {
           <div className="w-full md:w-1/5">
             <h3 className="text-xl font-bold text-amber-500">Our Menu</h3>
             <div className="flex flex-col text-lg mt-3 space-y-2">
-              <a href="#gallery" className="hover: transition hover:scale-105 ">
+              <a href="#gallery" className="hover: transition hover:scale-105">
                 Cheese Pizza
               </a>
               <a href="#gallery" className="hover: transition hover:scale-105 ">
