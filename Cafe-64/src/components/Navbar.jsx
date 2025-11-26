@@ -16,7 +16,7 @@ export default function Navbar() {
       />
 
       {/* Desktop Menu */}
-      <div className="hidden sm:flex space-x-10 text-lg font-medium text-white md:mr-120">
+      <div className="hidden sm:flex space-x-18 text-lg font-medium text-white md:mr-120">
         <a className="hover:text-amber-600" href="#home">Home</a>
         <a className="hover:text-amber-600" href="#gallery">Menu</a>
         <a className="hover:text-amber-600" href="#about">About</a>
