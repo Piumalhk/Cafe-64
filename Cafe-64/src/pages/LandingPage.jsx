@@ -10,7 +10,12 @@ import pasta from "../assets/pasta.webp";
 import FoodCard from "../components/FoodCard";
 import cart from "../assets/shopping-cart.png";
 import Navbar from "../components/Navbar";
-
+import facebookIcon from "../assets/facebook.png";
+import whatsapp from "../assets/whatsapp.png";
+import youtube from "../assets/youtube.png";
+import call from "../assets/call.png";
+import email from "../assets/email.png";
+import location from "../assets/location.png";
 
 const foodItems = [
   {
@@ -64,13 +69,14 @@ const foodItems = [
 function LandingPage() {
   return (
     <div>
-     
       {/* HERO SECTION */}
       <section
         id="home"
         style={{ backgroundImage: `url(${bgimg})` }}
         className="bg-cover bg-center bg-no-repeat relative h-200"
-      > <Navbar />
+      >
+        {" "}
+        <Navbar />
         <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-15 gap-10  ">
           <div className="flex-1  md:mt-2 text-center md:text-left">
             <p className="text-2xl mb-4 text-amber-600 font-bold ">
@@ -149,7 +155,119 @@ function LandingPage() {
         </p>
       </section>
 
-      
+      {/* FOOTER SECTION */}
+      <section className="bg-[#2F231A] text-white">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-10 px-6 py-12 md:px-20 md:ml-15">
+          {/* BRAND + SOCIAL */}
+          <div className="w-full md:w-1/4">
+            <img src="logo.png" alt="Cafe 64 Logo" className="h-12 w-auto" />
+
+            <p className="text-lg mt-3">
+              Cafe 64 is one of the most popular restaurants, with a special
+              menu created by our passionate chefs.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex space-x-4 mt-4">
+              <img
+                src={facebookIcon}
+                alt="Facebook"
+                className="h-6 w-6 mt-0.5 cursor-pointer hover:scale-110 transition"
+              />
+              <img
+                src={whatsapp}
+                alt="WhatsApp"
+                className="h-7.5 w-7.5  cursor-pointer hover:scale-110 transition"
+              />
+              <img
+                src={youtube}
+                alt="YouTube"
+                className="h-6 w-6 mt-0.5 cursor-pointer hover:scale-110 transition"
+              />
+            </div>
+          </div>
+
+          {/* OUR MENU */}
+          <div className="w-full md:w-1/5">
+            <h3 className="text-xl font-bold text-amber-500">Our Menu</h3>
+            <div className="flex flex-col text-lg mt-3 space-y-2">
+              <a href="#gallery" className="hover: transition hover:scale-105 ">
+                Cheese Pizza
+              </a>
+              <a href="#gallery" className="hover: transition hover:scale-105 ">
+                Pasta
+              </a>
+              <a href="#gallery" className="hover: transition hover:scale-105 ">
+                Lasagna
+              </a>
+              <a href="#gallery" className="hover: transition hover:scale-105 ">
+                Sandwiches
+              </a>
+            </div>
+          </div>
+
+          {/* USEFUL LINKS */}
+          <div className="w-full md:w-1/5">
+            <h3 className="text-xl font-bold text-amber-500">Useful Links</h3>
+            <div className="flex flex-col text-lg mt-3 space-y-2">
+              <a
+                href="#privacy-policy"
+                className="hover:transition hover:scale-105"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#terms-of-service"
+                className="hover:transition hover:scale-105"
+              >
+                Terms of Service
+              </a>
+              <a
+                href="#contact-us"
+                className="hover:transition hover:scale-105"
+              >
+                Contact Us
+              </a>
+              <a href="#faq" className="hover:transition hover:scale-105">
+                FAQ
+              </a>
+            </div>
+          </div>
+
+          {/* CONTACT US */}
+          <div className="w-full md:w-1/4">
+            <h3 className="text-xl font-bold text-amber-500">Contact Us</h3>
+
+            <div className="flex flex-col gap-3 mt-3 text-lg">
+              <div className="flex items-center gap-3 hover:scale-105 transition">
+                <div className="w-8 h-8 rounded-2xl bg-amber-600 flex items-center justify-center">
+                  <img src={call} alt="Phone" className="w-4 h-4" />
+                </div>
+                (123) 456-7890
+              </div>
+
+              <div className="flex items-center gap-3 hover:scale-105 transition">
+                <div className="w-8 h-8 rounded-2xl bg-amber-600 flex items-center justify-center">
+                  <img src={email} alt="Email" className="w-4 h-4" />
+                </div>
+                info@cafe64.com
+              </div>
+
+              <div className="flex items-center gap-3 hover:scale-105 transition">
+                <div className="w-8 h-8 rounded-2xl bg-amber-600 flex items-center justify-center">
+                  <img src={location} alt="Location" className="w-4 h-4" />
+                </div>
+                123 Cafe St, Food City
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM COPYRIGHT BAR */}
+        <div className="bg-[#412D1E] py-4 text-center text-sm md:text-lg">
+          &copy; {new Date().getFullYear()} Cafe 64. All rights reserved.
+        </div>
+      </section>
     </div>
   );
 }
