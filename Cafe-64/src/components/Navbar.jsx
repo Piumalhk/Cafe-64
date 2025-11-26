@@ -39,7 +39,7 @@ export default function Navbar() {
       <div
         className={`sm:hidden absolute top-16 left-0 w-full bg-amber-950 text-white 
         flex flex-col items-center space-y-6 py-6 text-lg font-medium 
-        transition-all duration-300
+        transition-all duration-300 z-50
         ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <a href="#home" onClick={() => setOpen(false)} className="hover:text-amber-400">Home</a>

@@ -95,7 +95,7 @@ function LandingPage() {
         style={{ backgroundImage: `url(${bgimg})` }}
         className="bg-cover bg-center bg-no-repeat relative h-200"
       >
-        {" "}
+        
         <Navbar />
         <div className="max-w-7xl  mx-auto flex flex-col md:flex-row items-center px-6 py-15 gap-10  "  data-aos="fade-up">
           <div className="flex-1  md:mt-2 text-center md:text-left">
@@ -255,7 +255,7 @@ function LandingPage() {
           </div>
 
           {/* CONTACT US */}
-          <div className="w-full md:w-1/4">
+          <div id="contact" className="w-full md:w-1/4">
             <h3 className="text-xl font-bold text-amber-500">Contact Us</h3>
 
             <div className="flex flex-col gap-3 mt-3 text-lg">
